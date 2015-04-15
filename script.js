@@ -40,6 +40,9 @@ wwdd.myQuotes = [
 	"You'd be surprised how much it costs to make a person look this cheap.",
 	"So when something doesn't go my way or I stumble, I pick myself up, make sure I brush off my rhinestones, & try not to harden my heart over it.",
 	"They think I'm simple-minded because I seem to be happy. Why shouldn't I be happy? I have everything I ever wanted and more.  Maybe I am simple-minded. Maybe that's the key: simple.",
+	"You can be rich in spirit, kindness, love and all those things that you can't put a dollar sign on.",
+	"Mama just always said, 'you be what you are and you don't have to worry about nothing.'",
+	"I'm not happy all the time, and I wouldn't want to be because that would make me a shallow person. But I do try to find the good in everybody.",
 	"If I see something saggin', baggin', or draggin', I'm gone have it nipped, tucked, or sucked!"
 ];
 
