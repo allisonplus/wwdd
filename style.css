@@ -104,6 +104,7 @@ button:active {
 	display:inline-block;
 	text-align:left;
 	padding:25px;
+	cursor:pointer;
 }
 
 .fa {
