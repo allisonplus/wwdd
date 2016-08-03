@@ -6,8 +6,8 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 body {
-	height:100%;
-	background:#FE91E3;
+	height: 100%;
+	background: #FE91E3;
 	background:url(img/bg.jpg) no-repeat center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -16,173 +16,175 @@ body {
 }
 
 h1 {
-	text-align:center;
+	color: rgba(178,85,159,0.7);
 	font-family: 'Meddon', cursive;
-	font-size:70px;
-	color:rgba(178,85,159,0.7);
-	margin:0;
-	word-spacing:25px;
+	font-size: 70px;
+	margin: 0;
+	text-align: center;
+	word-spacing: 25px;
 }
 
 .wrapper {
-	width:95%;
-	max-width:1500px;
-	margin:0 auto;
+	margin: 0 auto;
+	max-width: 1500px;
+	width: 95%;
 }
 
 .content {
-	min-height:450px;
-	position:relative;
-	width:50%;
-	float:right;
+	-webkit-flex-direction: column;
+	-webkit-justify-content: center;
 	display: -webkit-flex;
 	display: flex;
-	-webkit-flex-direction: column;
 	flex-direction: column;
-	-webkit-justify-content: center;
+	float: right;
 	justify-content: center;
+	min-height: 450px;
+	position: relative;
+	width: 50%;
 }
 
 .quote {
-	font-family:'EB Garamond', serif;
-	color:rgb(128,58,114);
-	font-size:35px;
-	width:85%;
-	padding-right:5%;
-	line-height:1.6;
+	color: rgb(128,58,114);
+	font-family: 'EB Garamond', serif;
+	font-size: 35px;
+	line-height: 1.6;
+	padding-right: 5%;
+	width: 85%;
 }
 
-button {
-	position:absolute;
-	bottom:-5%;
-	width:35%;
-	background:rgba(178,85,159,0.6);
-	border-radius:8px;
-	display:block;
-	margin:0 auto;
-	color:white;
+.button {
+	background: rgba(178,85,159,0.6);
+	border-radius: 8px;
+	border: 0;
+	bottom: -5%;
+	box-shadow: 0 5px #803a72;
+	color: white;
+	display: block;
+	margin: 0 auto;
 	padding: 15px 10px;
-	border:0;
+	position: absolute;
+	text-align: center;
+	text-decoration: none;
+	width: 185px;
+}
+
+.button p {
+	font-family: 'EB Garamond', serif;
+	font-size: 22px;
+	margin: 0;
+}
+
+.button:hover {
+	background: rgba(178,85,159,0.9);
 	box-shadow: 0 5px #803a72;
-}
-
-button p {
-	font-family:'EB Garamond', serif;
-	margin:0;
-	font-size:22px;
-}
-
-button:hover {
-	background:rgba(178,85,159,0.9);
 	transition: 0.4s ease;
-	box-shadow: 0 5px #803a72;
 }
 
-button:focus {
-	outline:thin dotted;
+.button:focus {
+	outline: thin dotted;
 }
 
-button:active {
-	box-shadow:0 3px #803a72;
-  transform:translateY(5px);
+.button:active {
+	box-shadow: 0 3px #803a72;
+	transform: translateY(5px);
 }
 
 /*========DROP DOWN MENU========*/
 
 .aboutDrop {
-	font-family:'EB Garamond', serif;
-	position:absolute;
-	top:0;
-	z-index:10;
-	display:none;
-	background:#aacfd8;
-	width:100%;
-	height:100vh;
+	background: #aacfd8;
+	display: none;
+	font-family: 'EB Garamond', serif;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 10;
 }
 
 .aboutButton {
-	display:inline-block;
-	text-align:left;
-	padding:25px;
-	cursor:pointer;
+	cursor: pointer;
+	display: inline-block;
+	padding: 25px;
+	text-align: left;
 }
 
 .fa {
-	color:rgb(178,85,159);
+	color: rgb(178,85,159);
 }
 
 .aboutDrop .close {
-	font-size:50px;
-	float:left;
-	margin:0;
-	padding:0 15px;
+	float: left;
+	font-size: 50px;
+	margin: 0;
+	padding: 0 15px;
 }
 
 .aboutDrop .innerWrapper {
-	padding:10% 30%;
+	padding: 10% 30%;
 }
 
 .aboutDrop h2 {
-	font-size:40px;
-	letter-spacing:4px;
-	padding-bottom:12px;
-	border-bottom:2px solid black;
+	border-bottom: 2px solid black;
+	font-size: 40px;
+	letter-spacing: 4px;
+	padding-bottom: 12px;
 }
 
 .aboutDrop h3 {
-	font-size:30px;
+	font-size: 30px;
 }
 
 .aboutDrop p {
-	padding-top:10%;
-	font-size:25px;
-	text-align:right;
+	font-size: 25px;
+	padding-top: 10%;
+	text-align: right;
 }
 
 .aboutDrop a {
-	text-decoration:none;
-	color:rgb(178,85,159);
+	color: rgb(178,85,159);
+	text-decoration: none;
 }
 
 
 /*=====TWITTER BUTTON======*/
 
 .twitter {
-	background:rgba(178,85,159,0.6);
-	border-radius:6px;
-	position:fixed;
-	top:3%;
-	right:3%;
-	padding:2px 0;
-	box-shadow:0 5px #803a72;
-	font-size:15px;
+	background: rgba(178,85,159,0.6);
+	border-radius: 6px;
+	box-shadow: 0 5px #803a72;
+	font-size: 15px;
+	padding: 2px 0;
+	position: fixed;
+	right: 3%;
+	top: 3%;
 }
 
 .twitter a {
-	padding:8px;
-	color:white;
-	text-decoration:none;
+	color: white;
+	padding: 8px;
+	text-decoration: none;
 }
 
 .twitter:hover {
-	background:rgba(178,85,159,0.9);
-	transition: 0.4s ease;
+	background: rgba(178,85,159,0.9);
 	box-shadow: 0 5px #803a72;
+	transition: 0.4s ease;
 }
 
 .twitter a:focus {
-	outline:thin dotted;
+	outline: thin dotted;
 }
 
 .twitter:active {
-	box-shadow:0 3px #803a72;
-  transform:translateY(5px);
+	box-shadow: 0 3px #803a72;
+	transform: translateY(5px);
 }
 
 .fa-twitter {
-	color:#803a72;
-	font-size:22px;
-	padding:2px;
+	color: #803a72;
+	font-size: 22px;
+	padding: 2px;
 }
 
 /*=========================================
@@ -191,103 +193,103 @@ button:active {
 
 @media all and (max-width: 1150px) {
   h1 {
-  	font-size:60px;
-  	word-spacing:5px;
+  	font-size: 60px;
+  	word-spacing: 5px;
   }
 
   .content {
-  	width:58%;
+  	width: 58%;
   }
 
   .quote {
-  	width:100%;
+  	width: 100%;
   }
 
   .aboutDrop .innerWrapper {
-  	padding:10% 25%;
+  	padding: 10% 25%;
   }
 }
 
 @media all and (max-width:900px) {
 	h1 {
-		font-size:55px;
+		font-size: 55px;
 	}
 
 	.content {
-		width:67%;
+		width: 67%;
 	}
 
 	.aboutDrop .innerWrapper {
-    padding:10% 20%;
-  }
+		padding: 10% 20%;
+	}
 }
 
 @media all and (max-width:830px) {
 	h1 {
-		font-size:50px;
+		font-size: 50px;
 		margin: 0 auto;
 	}
 
 	.content {
-		width:73%;
 		min-height:425px;
+		width:73%;
 	}
 }
 
 @media all and (max-width:760px) {
 	h1 {
-		font-size:45px;
+		font-size: 45px;
 	}
 
 	.aboutDrop .innerWrapper {
-    padding:10% 15%;
-  }
+		padding: 10% 15%;
+	}
 }
 
 @media all and (max-width:680px) {
 	h1 {
-		font-size:40px;
+		font-size: 40px;
 	}
 
 	.content {
-		width:75%;
-		min-height:420px;
+		width: 75%;
+		min-height: 420px;
 	}
 
 	.aboutDrop .innerWrapper {
-    	padding:10%;
-  }
+		padding: 10%;
+	}
 
-  button{
-  	bottom:-25%;
-  }
+	.button {
+		bottom: -25%;
+	}
 }
 
 
 @media all and (max-width:610px) {
 	h1 {
-		width:75%;
+		width: 75%;
 	}
 
 	.fa-2x {
-		font-size:2em;
+		font-size: 2em;
 	}
 
 	.content {
-		width:80%;
-		min-height:360px;
+		min-height: 360px;
+		width: 80%;
 	}
 
 	.quote {
-		font-size:30px;
+		font-size: 30px;
 	}
 
 	.aboutDrop h2 {
-		font-size:30px;
+		font-size: 30px;
 	}
 
 	.aboutDrop h3 {
-		font-size:25px;
+		font-size: 25px;
 	}
 }
 
@@ -295,36 +297,36 @@ button:active {
 
 @media only screen and (max-device-width: 736px) and (orientation: landscape) {
 	h1 {
-		font-size:35px;
+		font-size: 35px;
 	}
 
 	.content {
-		min-height:155px;
-		width:60%;
+		min-height: 155px;
+		width: 60%;
 	}
 
 	.quote {
-		font-size:21px;
+		font-size: 21px;
 	}
 
-	button {
-		width:45%;
-		padding:5px;
-		bottom:-40%;
+	.button {
+		bottom: -40%;
+		padding: 5px;
+		width: 45%;
 	}
 
 	.aboutDrop h2 {
-		font-size:25px;
+		font-size: 25px;
 	}
 
 	.aboutDrop h3 {
-		font-size:20px;
+		font-size: 20px;
 	}
 
 	.aboutDrop p {
-		padding:0;
-		text-align:left;
-		font-size:20px;
+		font-size: 20px;
+		padding: 0;
+		text-align: left;
 	}
 }
 
@@ -332,146 +334,147 @@ button:active {
 
 @media only screen and (max-device-width: 667px) and (orientation: landscape) {
 	h1 {
-		font-size:30px;
+		font-size: 30px;
 	}
 
 	.content {
-		min-height:160px;
-		width:60%;
+		min-height: 160px;
+		width: 60%;
 	}
 
 	.quote {
-		font-size:22px;
+		font-size: 22px;
 	}
 
-	button {
-		bottom:-35%;
-		padding:2%;
+	.button {
+		bottom: -35%;
+		padding: 2%;
 		width:55%;
 	}
 
 	.aboutButton {
-		padding:25px 0 0 25px
+		padding: 25px 0 0 25px
 	}
 
 	.aboutDrop h2 {
-		font-size:25px;
+		font-size: 25px;
 	}
 
 	.aboutDrop h3 {
-		font-size:18px;
+		font-size: 18px;
 	}
 
 	.twitter {
-		padding:0;
-		top:5%;
+		padding: 0;
+		top: 5%;
 	}
 
 	.twitter a {
-		padding:4px;
+		padding: 4px;
 	}
 
-	button p {
-		font-size:18px;
+	.button p {
+		font-size: 18px;
 	}
 
 }
 
 @media all and (max-width:530px) {
 	body {
-		background-image:none;
+		background-image: none;
 		background-color: #FE91E3
 	}
 	.content {
-		width:80%;
+		width: 80%;
 	}
 
-	button {
-		bottom:-90px;
+	.button {
+		bottom: -90px;
+		padding: 15px;
 		width:70%;
-		padding:15px;
 	}
 
 	.aboutDrop .innerWrapper {
-		padding:25% 10%;
+		padding: 25% 10%;
 	}
 
 	.aboutDrop h2 {
-		font-size:22px;
+		font-size: 22px;
 	}
 
 	.aboutDrop h3 {
-		font-size:20px;
+		font-size: 20px;
 	}
 
 	.aboutDrop p {
-		font-size:15px;
-		text-align:left;
+		font-size: 15px;
+		text-align: left;
 	}
 }
 
 @media all and (max-width:415px) {
 	h1 {
-		width:90%;
-		font-size:32px;
+		font-size: 32px;
+		width: 90%;
 	}
 
 	.content {
-		width:90%;
-		min-height:310px;
+		min-height: 310px;
+		width: 90%;
 	}
 
 	.quote {
-		font-size:25px;
+		font-size: 25px;
 	}
 }
 
 @media all and (max-width:375px) {
 	.content {
-		min-height:250px;
-		width:95%;
+		min-height: 250px;
+		width: 95%;
 	}
 
 	h1 {
-		font-size:30px;
+		font-size: 30px;
 	}
 }
 
 @media all and (max-width:320px) and (orientation:portrait) {
 	h1 {
-		font-size:19px;
-		width:95%;
-		word-spacing:0;
+		font-size: 19px;
+		width: 95%;
+		word-spacing: 0;
 	}
 
 	.quote {
-		font-size:20px;
+		font-size: 20px;
+		padding-right: 0;
 	}
 
 	.content {
-		min-height:220px;
+		min-height: 220px;
 	}
 
 	.aboutDrop h2 {
-		font-size:18px;
+		font-size: 18px;
 	}
 
 	.aboutDrop h3 {
-		font-size:18px;
+		font-size: 18px;
 	}
 
 	.aboutDrop p {
-		font-size:16px;
-		text-align:left;
+		font-size: 16px;
+		text-align: left;
 	}
 
-	button {
-		bottom:-40%;
-		width:90%;
+	.button {
+		bottom: -40%;
+		width: 90%;
 	}
 
-	button p {
-		font-size:18px;
+	.button p {
+		font-size: 18px;
 	}
 
 	.twitter {
@@ -481,18 +484,18 @@ button:active {
 
 @media only screen and (max-device-width: 568px) and (orientation: landscape) {
   h1 {
-		font-size:25px;
-		width:95%;
-		word-spacing:0;
+		font-size: 25px;
+		width: 95%;
+		word-spacing: 0;
 	}
 
 	.quote {
-		font-size:18px;
+		font-size: 18px;
 	}
 
 	.content {
-		min-height:100px;
-		width:60%;
+		min-height: 100px;
+		width: 60%;
 	}
 
 	.aboutButton {
@@ -500,38 +503,38 @@ button:active {
 	}
 
 	.aboutDrop h2 {
-		font-size:18px;
+		font-size: 18px;
 	}
 
 	.aboutDrop h3 {
-		font-size:18px;
+		font-size: 18px;
 	}
 
 	.aboutDrop p {
-		font-size:15px;
-		text-align:left;
+		font-size: 15px;
+		text-align: left;
 	}
 
-	button {
-		bottom:-65%;
-		padding:5px;
+	.button {
+		bottom: -65%;
+		padding: 5px;
 	}
 
-	button p {
-		font-size:16px;
+	.button p {
+		font-size: 16px;
 	}
 
 	.twitter {
-		top:7%;
+		top: 7%;
 	}
 
 	.twitter a {
-		font-size:12px;
+		font-size: 12px;
 	}
 
 	.fa-twitter {
-		font-size:15px;
-		padding:0;
+		font-size: 15px;
+		padding: 0;
 	}
 }
 
@@ -543,34 +546,34 @@ button:active {
 	}
 
 	.content {
-		width:80%;
-		min-height:140px;
+		min-height: 140px;
+		width: 80%;
 	}
 
 	.quote {
-		width:80%;
-		font-size:17px;
+		font-size: 17px;
+		width: 80%;
 	}
 
 	.aboutButton {
 		padding: 25px 0 0 25px;
 	}
 
-	button {
-		bottom:-40px;
-		width:50%;
-		padding:5px;
+	.button {
+		bottom: -40px;
+		padding: 5px;
+		width: 50%;
 	}
 
-	button p {
-		font-size:15px;
+	.button p {
+		font-size: 15px;
 	}
 
 	.aboutDrop .innerWrapper {
-		padding:5%;
+		padding: 5%;
 	}
 
 	.twitter a {
-		padding:6px;
+		padding: 6px;
 	}
 }
