@@ -3,7 +3,7 @@ var wwdd = {};
 
 // List of quotes inside array
 wwdd.myQuotes = [
-	"When someone shows you their true colors, believe them.", 
+	"When someone shows you their true colors, believe them.",
 	"I'm not going to limit myself just because people won't accept the fact that I can do something else." ,
 	"It takes a lot of strength to let yourself be truly vulnerable. & that is when you gain the most.",
 	"A smart woman can take a man who thinks with his small head and quickly turn the would-be screwer into the screwee.",
@@ -21,7 +21,7 @@ wwdd.myQuotes = [
 	"More important than the road itself are the people we meet along the way",
 	"People are not perfect. They will sometimes take your love & give nothing back or, worse yet, use it against you. But they are still all there is.",
 	"Just because you've lost your fuzz, don't mean you ain't a peach.",
-	"Find out who you are and do it on purpose.", 
+	"Find out who you are and do it on purpose.",
 	"It's hard to be a diamond in a rhinestone world.",
 	"I refuse to settle for something less than great.  & if it takes a lifetime, then that's how long I'll wait.",
 	"I just don't feel like I have to explain myself. I love everybody.",
@@ -67,7 +67,7 @@ wwdd.random = function() {
 
 // When button is clicked, fades out current quote, then fades in next quote
 $(function(){
-	$('button').on('click', function(){
+	$('.button').on('click', function(){
 		$(".quote").fadeOut(function() {
 			$(".quote").fadeIn().html("“" + wwdd.myQuotes[wwdd.random()] + "”");
 		});
