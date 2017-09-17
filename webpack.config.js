@@ -11,6 +11,10 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.scss$/,
+        loaders: [ "style", "css", "sass", 'scss' ],
+      },
+      {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: {
@@ -40,7 +44,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      'vue$': 'vue/dist/vue.esm.js'
+      'vue$': 'vue/dist/vue.esm.js',
     }
   },
   devServer: {

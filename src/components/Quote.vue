@@ -26,3 +26,12 @@
 		}
 	}
 </script>
+
+<style lang="scss">
+	@import '../assets/styles/_global.scss';
+
+.quote {
+	background-color: $green;
+	font-size: 30px;
+}
+</style>

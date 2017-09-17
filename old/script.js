@@ -1,8 +1,6 @@
 // Blank namespace
 var wwdd = {};
 
-
-
 // Function that loads first quote on page load
 $(document).ready(function() {
 	$(".quote").html("“" + wwdd.myQuotes[wwdd.random()] + "”");
