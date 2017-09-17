@@ -39,7 +39,7 @@ export default {
 	data () {
 		return {
 			msg: 'What Would Dolly Do?',
-			background_colours: [ 'pink', 'blue', 'green' ],
+			colours: 5,
 			current_colour: ''
 		}
 	},
@@ -50,6 +50,17 @@ export default {
 		getRandomColour: function( arrayName ) {
 			let index = this.getRandomNumber( this.background_colours );
 			this.current_colour = this.background_colours[index];
+		}
+	},
+	computed: {
+		background_colours: function() {
+			let bg_array = [];
+
+			for (var i = 1; i <= this.colours; i++) {
+				bg_array.push( `background_${i}` );
+			}
+
+			return bg_array;
 		}
 	},
 	mounted: function() {
