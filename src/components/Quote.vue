@@ -1,7 +1,7 @@
 <template>
 	<div class="quote">
 		<p>{{quote}}</p>
-	<button class="button">Wise Words, Please</button>
+	<button @click="getRandomQuote" class="button">Wise Words, Please</button>
 	</div>
 </template>
 
