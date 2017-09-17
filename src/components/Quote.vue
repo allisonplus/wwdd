@@ -10,6 +10,7 @@
 
 	export default {
 		name: 'quote',
+		props: [ 'getRandomNumber', 'getRandomColour' ],
 		data: function() {
 			return {
 				quote: "",
@@ -17,8 +18,9 @@
 		},
 		methods: {
 			getRandomQuote: function() {
-				let index = Math.floor( Math.random()*( quotes.length ) );
+				let index = this.getRandomNumber(quotes);
 				this.quote = `"${quotes[index]}"`;
+				this.getRandomColour();
 			}
 		},
 		mounted: function() {
@@ -30,8 +32,7 @@
 <style lang="scss">
 	@import '../assets/styles/_global.scss';
 
-.quote {
-	background-color: $green;
-	font-size: 30px;
-}
+	.quote {
+		font-size: 30px;
+	}
 </style>

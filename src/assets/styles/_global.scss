@@ -1,7 +1,89 @@
-$green: #bada55;
-$pink: #FE91E3;
+@import "normalize";
+
+$pink: #fe91e3;
+$blue: #aacfd8;
+$cursive: 'Meddon', cursive;
+$serif: 'EB Garamond', serif;
 
 body {
-	background-color: $pink;
+	// background-color: $pink;
+	font-family: $serif;
 }
 
+.transitional {
+	transition: background-color 0.25s ease-in;
+
+	&.pink {
+		background-color: $pink;
+	}
+
+	&.blue {
+		background-color: $blue;
+	}
+
+	&.green {
+		background-color: green;
+	}
+} // .transitional
+
+h1 {
+	font-family: $cursive;
+	font-size: 70px;
+	margin: 0;
+	text-align: center;
+	word-spacing: 25px;
+}
+
+button {
+	background: none repeat scroll 0 0 transparent;
+	border-spacing: 0;
+	border: medium none;
+	font-size: 20px;
+	font-weight: normal;
+	line-height: 1.42rem;
+	list-style: none outside none;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	text-decoration: none;
+	text-indent: 0;
+}
+
+body {
+	// background: url(../assets/img/bg.jpg) no-repeat center fixed;
+	background-size: cover;
+}
+
+.wrapper {
+	margin: 0 auto;
+	max-width: 1500px;
+	width: 95%;
+}
+
+.content {
+	-webkit-flex-direction: column;
+	-webkit-justify-content: center;
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: column;
+	float: right;
+	justify-content: center;
+	min-height: 450px;
+	position: relative;
+	width: 50%;
+}
+
+.about-drop {
+	background: $blue;
+	display: none;
+	font-family: $serif;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 10;
+}
+
+.fa {
+	color: rebeccapurple;
+}
