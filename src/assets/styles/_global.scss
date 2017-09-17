@@ -10,6 +10,9 @@ $colours: ( #DB5ABA, #C455A8, #CF8BA3, #D7A6B3, #E5CDC8 );
 
 body {
 	font-family: $serif;
+	height: 100%;
+	// background: url(../assets/img/bg.jpg) no-repeat center fixed;
+	background-size: cover;
 }
 
 .transitional {
@@ -47,12 +50,6 @@ button {
 	text-indent: 0;
 }
 
-body {
-	height: 100%;
-	// background: url(../assets/img/bg.jpg) no-repeat center fixed;
-	background-size: cover;
-}
-
 .wrapper {
 	margin: 0 auto;
 	max-width: 1500px;
@@ -81,8 +78,8 @@ body {
 	top: 0;
 	width: 100%;
 	z-index: 10;
-}
 
-.fa {
-	color: rebeccapurple;
+	&.active {
+		display: block;
+	}
 }

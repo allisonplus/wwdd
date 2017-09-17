@@ -1,11 +1,12 @@
 <template>
 	<div id="app" class="transitional" v-bind:class="current_colour">
 
-		<div class="aboutButton"><i class="fa fa-bars fa-2x"></i>
-		</div> <!-- end .aboutButton -->
+		<button class="about-button" v-on:click="isActive = !isActive">
+			<i class="fa fa-bars fa-2x"></i>
+		</button>
 
-		<div class="about-drop">
-			<p class="close">&times;</p>
+		<div v-bind:class="{ active: isActive }" class="about-drop">
+			<button class="close" v-on:click="isActive = !isActive">&times;</button>
 			<div class="innerWrapper">
 				<h2>{{msg}}</h2>
 				<h3>For the times in our lives when we need words of wisdom from a higher power that embraces big hair and rhinestones.</h3>
@@ -40,6 +41,7 @@ export default {
 		return {
 			msg: 'What Would Dolly Do?',
 			colours: 5,
+			isActive: false,
 			current_colour: ''
 		}
 	},
@@ -50,7 +52,11 @@ export default {
 		getRandomColour: function( arrayName ) {
 			let index = this.getRandomNumber( this.background_colours );
 			this.current_colour = this.background_colours[index];
-		}
+		},
+		// myFilter: function(){
+		// 	this.isActive = !this.isActive;
+		// 	console.log('active?');
+		// }
 	},
 	computed: {
 		background_colours: function() {
@@ -65,6 +71,7 @@ export default {
 	},
 	mounted: function() {
 		this.getRandomColour();
+		// this.myFilter();
 	},
 	components: {
 		Quote
