@@ -1,6 +1,7 @@
 <template>
 	<div class="quote">
-		{{quote}}
+		<p>{{quote}}</p>
+	<button class="button">Wise Words, Please</button>
 	</div>
 </template>
 
@@ -17,7 +18,7 @@
 		methods: {
 			getRandomQuote: function() {
 				let index = Math.floor( Math.random()*( quotes.length ) );
-				this.quote = quotes[index];
+				this.quote = `"${quotes[index]}"`;
 			}
 		},
 		mounted: function() {
