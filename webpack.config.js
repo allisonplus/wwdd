@@ -1,4 +1,5 @@
 var path = require('path')
+var UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 var webpack = require('webpack')
 
 module.exports = {
@@ -57,6 +58,7 @@ module.exports = {
   devtool: '#eval-source-map'
 }
 
+
 if (process.env.NODE_ENV === 'production') {
   module.exports.devtool = '#source-map'
   // http://vue-loader.vuejs.org/en/workflow/production.html
@@ -66,11 +68,20 @@ if (process.env.NODE_ENV === 'production') {
         NODE_ENV: '"production"'
       }
     }),
-    new webpack.optimize.UglifyJsPlugin({
-      sourceMap: true,
-      compress: {
-        warnings: false
-      }
+
+    new UglifyJSPlugin({
+      uglifyOptions: {
+        ie8: false,
+        ecma: 6,
+        output: {
+          comments: false,
+          beautify: {
+                  keep_quoted_props: true,  // keep quoted key names in object literals
+                  quote_style: 3,           // preserve original string quoting style
+              }
+        },
+        warnings: false,
+      },
     }),
     new webpack.LoaderOptionsPlugin({
       minimize: true
