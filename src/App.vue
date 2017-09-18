@@ -39,7 +39,7 @@ export default {
 	data () {
 		return {
 			msg: 'What Would Dolly Do?',
-			colours: 5,
+			colours: 7,
 			isActive: false,
 			current_colour: ''
 		}
