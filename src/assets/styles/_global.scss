@@ -1,6 +1,9 @@
-$cursive: 'Meddon', cursive;
+@import "normalize";
+
+$title: 'Vollkorn', serif;
 $serif: 'EB Garamond', serif;
 $pink: #fe91e3;
+$darkpink: darken($pink, 40%);
 $blue: #aacfd8;
 $black: #000;
 $gutter: 20px;
@@ -11,9 +14,11 @@ $colours: ( #DB5ABA, #C455A8, #CF8BA3, #D7A6B3, #E5CDC8 );
 .app {
 	background-color: $pink;
 	background-size: cover;
-	background: url('/src/assets/img/dolly-parton.png') no-repeat center fixed;
+	background: url('/src/assets/img/dolly-parton.png') no-repeat left fixed;
 	font-family: $serif;
-	height: 100%;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 	padding: $gutter;
 }
 
@@ -30,30 +35,47 @@ $colours: ( #DB5ABA, #C455A8, #CF8BA3, #D7A6B3, #E5CDC8 );
 } // .transitional
 
 h1 {
-	font-family: $cursive;
-	font-size: 70px;
+	font-family: $title;
+	font-size: 60px;
 	margin: 0;
 	text-align: center;
-	word-spacing: 25px;
 }
 
 .wrapper {
-	margin: 0 auto;
-	min-height: 100vh;
-	width: 95%;
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+
+	.quote {
+		align-content: flex-start;
+		display: flex;
+		flex-direction: column;
+		font-size: 40px;
+		width: 100%;
+		// min-height: 150px;
+		// justify-content: space-between;
+
+		p {
+			margin-top: 0;
+		}
+	}
 }
 
 .content {
 	-webkit-flex-direction: column;
 	-webkit-justify-content: center;
+	justify-content: center;
 	display: -webkit-flex;
 	display: flex;
 	flex-direction: column;
-	float: right;
-	justify-content: center;
-	position: relative;
+	flex: 1;
+	margin-left: auto;
 	width: 50%;
 }
+.twitter {
+	position: absolute;
+	right: $gutter;
+	top: $gutter;
+}
 
-@import "normalize";
 @import "about";

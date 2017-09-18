@@ -33,6 +33,6 @@
 	@import '../assets/styles/_global.scss';
 
 	.quote {
-		font-size: 30px;
+		// font-size: 30px;
 	}
 </style>
