@@ -1,22 +1,19 @@
-@import "normalize";
-
 $cursive: 'Meddon', cursive;
 $serif: 'EB Garamond', serif;
 $pink: #fe91e3;
 $blue: #aacfd8;
+$black: #000;
 $gutter: 20px;
 
 // Colours.
 $colours: ( #DB5ABA, #C455A8, #CF8BA3, #D7A6B3, #E5CDC8 );
 
-body {
+.app {
+	background-color: $pink;
+	background-size: cover;
+	background: url('/src/assets/img/dolly-parton.png') no-repeat center fixed;
 	font-family: $serif;
 	height: 100%;
-	// background: url(../assets/img/bg.jpg) no-repeat center fixed;
-	background-size: cover;
-}
-
-.app {
 	padding: $gutter;
 }
 
@@ -40,20 +37,6 @@ h1 {
 	word-spacing: 25px;
 }
 
-button {
-	background: none repeat scroll 0 0 transparent;
-	border-spacing: 0;
-	border: medium none;
-	font-size: 20px;
-	font-weight: normal;
-	display: inline-block;
-	margin: 0;
-	padding: 0;
-	text-align: left;
-	text-decoration: none;
-	text-indent: 0;
-}
-
 .wrapper {
 	margin: 0 auto;
 	min-height: 100vh;
@@ -72,74 +55,5 @@ button {
 	width: 50%;
 }
 
-.about-button {
-	position: relative;
-	z-index: 10;
-
-	// When open...
-	&.active {
-		bottom: 0;
-
-		// Change those lines.
-		.mobile-menu-bar:nth-of-type(1) {
-			transform: translateY(12px) rotate(45deg);
-		}
-
-		.mobile-menu-bar:nth-of-type(2) {
-			opacity: 0;
-		}
-
-		.mobile-menu-bar:nth-of-type(3) {
-			transform: translateY(-12px) rotate(-45deg);
-		}
-	}
-}
-
-.about-drop {
-	background: $blue;
-	font-family: $serif;
-	height: 100vh;
-	left: 0;
-	padding: $gutter;
-	position: absolute;
-	bottom: 100%;
-	transition: bottom 0.4s ease-in-out;
-	width: 100%;
-	z-index: 1;
-
-	// When open...
-	&.active {
-		bottom: 0;
-
-		// Change those lines.
-		.mobile-menu-bar:nth-of-type(1) {
-			transform: translateY(12px) rotate(45deg);
-		}
-
-		.mobile-menu-bar:nth-of-type(2) {
-			opacity: 0;
-		}
-
-		.mobile-menu-bar:nth-of-type(3) {
-			transform: translateY(-12px) rotate(-45deg);
-		}
-	} // &.active
-
-	.inner-wrapper {
-		padding: 10% 30% 0;
-	}
-} // .about-drop
-
-.close {
-	font-size: 50px;
-}
-
-// Global styles for Hamburger Lines.
-.mobile-menu-bar {
-	background-color: black;
-	display: block;
-	height: 5px;
-	margin: 7px auto;
-	transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-	width: 40px;
-}
+@import "normalize";
+@import "about";

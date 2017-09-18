@@ -15,7 +15,7 @@
 			class="about-drop"
 			v-bind:class="{ active: isActive }"
 		>
-			<div class="inner-wrapper">
+			<div class="wrapper">
 				<h2>{{msg}}</h2>
 				<h3>For the times in our lives when we need words of wisdom from a higher power that embraces big hair and rhinestones.</h3>
 				<p>Made with <i class="fa fa-heart"></i> by <a href="http://www.allisontarr.com">Allison Tarr</a></p>
