@@ -19,7 +19,7 @@
 		methods: {
 			getRandomQuote: function() {
 				let index = this.getRandomNumber(quotes);
-				this.quote = `“${quotes[index]}”`;
+				this.quote = `"${quotes[index]}"`;
 				this.getRandomColour();
 			}
 		},
@@ -31,8 +31,4 @@
 
 <style lang="scss">
 	@import '../assets/styles/_global.scss';
-
-	.quote {
-		// font-size: 30px;
-	}
 </style>
