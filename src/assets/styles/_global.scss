@@ -2,10 +2,18 @@
 
 $title: 'Vollkorn', serif;
 $serif: 'EB Garamond', serif;
+
 $pink: #fe91e3;
 $darkpink: darken($pink, 40%);
 $blue: #aacfd8;
 $black: #000;
+
+// $large-desktop: 1680px;
+// $desktop: 1366px;
+$tablet-landscape: 1024px;
+$tablet-portrait: 768px;
+$phone-landscape: 640px;
+
 $gutter: 20px;
 
 // Colours.
@@ -30,15 +38,23 @@ $colours: ( #DB5ABA, #C455A8, #CF8BA3, #D7A6B3, #E5CDC8 );
 
 		&.background_#{$i} {
 			background-color: $current-colour;
+
+			.button {
+				background-color: rgba(darken($current-colour, 8%), 0.55);
+			}
 		}
 	}
 } // .transitional
 
 h1 {
 	font-family: $title;
-	font-size: 60px;
+	font-size: 45px;
 	margin: 0;
 	text-align: center;
+
+	@media (min-width: $tablet-portrait) {
+		font-size: 60px;
+	}
 }
 
 .wrapper {
@@ -47,31 +63,56 @@ h1 {
 	flex: 1;
 
 	.quote {
-		align-content: flex-start;
-		display: flex;
-		flex-direction: column;
-		font-size: 40px;
-		width: 100%;
-		// min-height: 150px;
-		// justify-content: space-between;
+		font-size: 28px;
+		position: relative;
+
+		@media (min-width: $tablet-portrait) {
+			font-size: 34px;
+			min-height: 210px;
+		}
+
+		@media (min-width: $tablet-landscape) {
+			font-size: 40px;
+			min-height: 250px;
+		}
 
 		p {
 			margin-top: 0;
 		}
+	} // .quote
+} // .wrapper
+
+.button {
+	border-radius: 5px;
+	font-size: 28px;
+	padding: $gutter/2 $gutter;
+
+	@media (min-width: $tablet-portrait) {
+		bottom: 0;
+		position: absolute;
+	}
+
+	@media (min-width: $tablet-landscape) {
+		bottom: -15%;
+		position: absolute;
 	}
 }
 
 .content {
 	-webkit-flex-direction: column;
 	-webkit-justify-content: center;
-	justify-content: center;
 	display: -webkit-flex;
 	display: flex;
 	flex-direction: column;
 	flex: 1;
-	margin-left: auto;
-	width: 50%;
+	justify-content: center;
+
+	@media (min-width: $tablet-landscape) {
+		margin: 0 5% 0 auto;
+		width: 50%;
+	}
 }
+
 .twitter {
 	position: absolute;
 	right: $gutter;
