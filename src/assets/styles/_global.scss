@@ -1,6 +1,6 @@
 @import "normalize";
 
-$title: 'Vollkorn', serif;
+$cursive: 'Dancing Script', cursive;;
 $serif: 'EB Garamond', serif;
 
 $pink: #fe91e3;
@@ -16,7 +16,7 @@ $tablet-portrait: 768px;
 $gutter: 20px;
 
 // Colours.
-$colours: ( #88527F, #DB5ABA, #C455A8, #CF8BA3, #D7A6B3, #8AB5CB, #75AEB7 );
+$colours: ( #9F6096, #DB5ABA, #C455A8, #CF8BA3, #D7A6B3, #8AB5CB, #75AEB7 );
 
 .app {
 	background-color: $pink;
@@ -39,15 +39,30 @@ $colours: ( #88527F, #DB5ABA, #C455A8, #CF8BA3, #D7A6B3, #8AB5CB, #75AEB7 );
 			background-color: $current-colour;
 
 			.button {
+				-webkit-transform: perspective(1px) translateZ(0);
+				-webkit-transition-duration: 0.3s;
+				-webkit-transition-property: transform;
 				background-color: rgba(darken($current-colour, 8%), 0.55);
-			}
+				box-shadow: 0 0 1px transparent;
+				display: inline-block;
+				transform: perspective(1px) translateZ(0);
+				transition-duration: 0.3s;
+				transition-property: transform;
+				vertical-align: middle;
+
+				&:hover {
+					-webkit-transform: scale(1.05);
+					transform: scale(1.05);
+				}
+			} // .button
 		}
-	}
+	} // background-colours loop
 } // .transitional
 
 h1 {
-	font-family: $title;
+	font-family: $cursive;
 	font-size: 45px;
+	font-weight: 700;
 	margin: 0;
 	text-align: center;
 
@@ -58,7 +73,7 @@ h1 {
 	@media (min-width: $large-desktop) {
 		font-size: 90px;
 	}
-}
+} // h1
 
 .wrapper {
 	display: flex;
@@ -79,7 +94,7 @@ h1 {
 		}
 
 		@media (min-width: $desktop) {
-			font-size: 40px;
+			font-size: 34px;
 		}
 
 		@media (min-width: $large-desktop) {
@@ -87,6 +102,8 @@ h1 {
 		}
 
 		p {
+			font-weight: normal;
+			letter-spacing: 1.6px;
 			margin-top: 0;
 		}
 	} // .quote
@@ -129,9 +146,44 @@ h1 {
 }
 
 .twitter {
+	font-size: 28px;
 	position: absolute;
 	right: $gutter;
 	top: $gutter;
+
+	a {
+		color: $black;
+	}
+}
+
+// Hide text meant only for screen readers.
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	height: auto;
+	overflow: hidden;
+	position: absolute !important;
+	width: 1px;
+
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: $black;
+		box-shadow: 0 0 2px 2px rgba($black, 0.6);
+		clip: auto !important;
+		color: $black;
+		display: block;
+		font-size: 14px;
+		font-weight: 700;
+		height: auto;
+		left: 5px;
+		line-height: normal;
+		padding: 15px 23px 14px;
+		text-decoration: none;
+		top: 5px;
+		width: auto;
+		z-index: 100000;
+	}
 }
 
 @import "about";
