@@ -1,20 +1,28 @@
 <template>
-	<div id="app" class="transitional" v-bind:class="current_colour">
+	<div id="app" class="transitional app" v-bind:class="current_colour">
 
-		<button class="about-button" v-on:click="isActive = !isActive">
-			<i class="fa fa-bars fa-2x"></i>
+		<button
+			class="about-button"
+			v-bind:class="{ active: isActive }"
+			v-on:click="isActive = !isActive"
+		>
+			<span class="mobile-menu-bar line-1"></span>
+			<span class="mobile-menu-bar line-2"></span>
+			<span class="mobile-menu-bar line-3"></span>
 		</button>
 
-		<div v-bind:class="{ active: isActive }" class="about-drop">
-			<button class="close" v-on:click="isActive = !isActive">&times;</button>
-			<div class="innerWrapper">
+		<div
+			class="about-drop"
+			v-bind:class="{ active: isActive }"
+		>
+			<div class="inner-wrapper">
 				<h2>{{msg}}</h2>
 				<h3>For the times in our lives when we need words of wisdom from a higher power that embraces big hair and rhinestones.</h3>
 				<p>Made with <i class="fa fa-heart"></i> by <a href="http://www.allisontarr.com">Allison Tarr</a></p>
 			</div>
 		</div> <!--/.about-drop-->
 
-		<div class="wrapper clearfix">
+		<div class="wrapper">
 			<h1>{{msg}}</h1>
 				<div class="content">
 
@@ -53,10 +61,6 @@ export default {
 			let index = this.getRandomNumber( this.background_colours );
 			this.current_colour = this.background_colours[index];
 		},
-		// myFilter: function(){
-		// 	this.isActive = !this.isActive;
-		// 	console.log('active?');
-		// }
 	},
 	computed: {
 		background_colours: function() {
@@ -71,7 +75,6 @@ export default {
 	},
 	mounted: function() {
 		this.getRandomColour();
-		// this.myFilter();
 	},
 	components: {
 		Quote
