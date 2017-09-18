@@ -19,7 +19,7 @@
 		methods: {
 			getRandomQuote: function() {
 				let index = this.getRandomNumber(quotes);
-				this.quote = `"${quotes[index]}"`;
+				this.quote = `“${quotes[index]}”`;
 				this.getRandomColour();
 			}
 		},
