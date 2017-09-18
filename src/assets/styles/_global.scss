@@ -8,11 +8,10 @@ $darkpink: darken($pink, 40%);
 $blue: #aacfd8;
 $black: #000;
 
-// $large-desktop: 1680px;
-// $desktop: 1366px;
+$large-desktop: 1680px;
+$desktop: 1366px;
 $tablet-landscape: 1024px;
 $tablet-portrait: 768px;
-$phone-landscape: 640px;
 
 $gutter: 20px;
 
@@ -55,6 +54,10 @@ h1 {
 	@media (min-width: $tablet-portrait) {
 		font-size: 60px;
 	}
+
+	@media (min-width: $large-desktop) {
+		font-size: 90px;
+	}
 }
 
 .wrapper {
@@ -72,8 +75,15 @@ h1 {
 		}
 
 		@media (min-width: $tablet-landscape) {
-			font-size: 40px;
 			min-height: 250px;
+		}
+
+		@media (min-width: $desktop) {
+			font-size: 40px;
+		}
+
+		@media (min-width: $large-desktop) {
+			min-height: 210px;
 		}
 
 		p {
@@ -108,6 +118,11 @@ h1 {
 	justify-content: center;
 
 	@media (min-width: $tablet-landscape) {
+		margin: 0 3% 0 auto;
+		width: 60%;
+	}
+
+	@media (min-width: $desktop) {
 		margin: 0 5% 0 auto;
 		width: 50%;
 	}

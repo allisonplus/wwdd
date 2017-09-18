@@ -43,19 +43,12 @@ button {
 		}
 	} // &.active
 
-	h3 {
-		margin-bottom: 0;
-	}
-
 	p {
 		margin: 0;
 	}
 
 	.wrapper {
-
-		@media (min-width: $tablet-portrait) {
-			padding: 10% 20% 0;
-		}
+		padding: 10% 5%;
 
 		.fa,
 		a {
