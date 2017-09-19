@@ -12,6 +12,7 @@ $large-desktop: 1680px;
 $desktop: 1366px;
 $tablet-landscape: 1024px;
 $tablet-portrait: 768px;
+$phone-landscape: 650px;
 
 $gutter: 20px;
 
@@ -62,15 +63,13 @@ $colours: ( #9F6096, #DB5ABA, #C455A8, #CF8BA3, #D7A6B3, #8AB5CB, #75AEB7 );
 h1 {
 	font-family: $cursive;
 	font-size: 45px;
-	font-weight: 700;
-	margin: 0;
 	text-align: center;
 
 	@media (min-width: $tablet-portrait) {
-		font-size: 60px;
+		font-size: 80px;
 	}
 
-	@media (min-width: $large-desktop) {
+	@media (min-width: $desktop) {
 		font-size: 90px;
 	}
 } // h1
@@ -160,7 +159,6 @@ h1 {
 .screen-reader-text {
 	clip: rect(1px, 1px, 1px, 1px);
 	height: 1px;
-	height: auto;
 	overflow: hidden;
 	position: absolute !important;
 	width: 1px;

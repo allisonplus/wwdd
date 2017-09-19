@@ -20,7 +20,7 @@ button {
 	font-family: $serif;
 	height: 100vh;
 	left: 0;
-	padding: $gutter;
+	padding: $gutter*2 $gutter;
 	position: absolute;
 	transition: bottom 0.4s ease-in-out;
 	width: 100%;
@@ -46,7 +46,7 @@ button {
 
 	// WWDD title.
 	h2 {
-		font-family: $cursive;
+		border-bottom: 2px solid $black;
 		font-size: 34px;
 		margin-top: 50px;
 
@@ -69,7 +69,7 @@ button {
 	.wrapper {
 
 		@media (min-width: $tablet-portrait) {
-			padding: 10% 25%;
+			padding: 10% 15%;
 		}
 
 		// Heart + link.
@@ -80,17 +80,23 @@ button {
 
 		// Links.
 		a {
-			box-shadow: inset 0 -0.1em 0 0 $darkpink;
+			box-shadow: inset 0 -0.1em 0 -.5px $darkpink;
+			-webkit-box-shadow: inset 0 -0.1em 0 -.5px $darkpink;
+
 			color: $black;
 			text-decoration: none;
-			transition-duration: 0.2s, 0.4s;
-			transition-property: box-shadow, color;
+			transition-duration: 0.2s;
+			transition-property: box-shadow;
 			transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
+
+			@media (min-width: $phone-landscape) {
+				box-shadow: inset 0 -0.1em 0 0 $darkpink;
+			}
 
 			&:hover,
 			&:focus,
 			&:active {
-				box-shadow: inset 0 -0.25em 0 0 $darkpink;
+				box-shadow: inset 0 -0.25em 0 -.5px $darkpink;
 			}
 		}
 	} // .wrapper
