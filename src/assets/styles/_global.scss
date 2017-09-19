@@ -86,11 +86,7 @@ h1 {
 
 		@media (min-width: $tablet-portrait) {
 			font-size: 34px;
-			min-height: 210px;
-		}
-
-		@media (min-width: $tablet-landscape) {
-			min-height: 250px;
+			min-height: 270px;
 		}
 
 		@media (min-width: $desktop) {
@@ -98,7 +94,7 @@ h1 {
 		}
 
 		@media (min-width: $large-desktop) {
-			min-height: 210px;
+			min-height: 200px;
 		}
 
 		p {
@@ -131,7 +127,7 @@ h1 {
 	display: -webkit-flex;
 	display: flex;
 	flex-direction: column;
-	flex: 1;
+	flex: .5;
 	justify-content: center;
 
 	@media (min-width: $tablet-landscape) {
@@ -140,6 +136,7 @@ h1 {
 	}
 
 	@media (min-width: $desktop) {
+		flex: 1;
 		margin: 0 5% 0 auto;
 		width: 50%;
 	}
